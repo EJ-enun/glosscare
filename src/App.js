@@ -5,9 +5,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 import {
   withAuthenticator,
-  Button,
   Heading,
-  Image,
   View,
   Card,
 } from "@aws-amplify/ui-react";
