@@ -10,7 +10,8 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 
-function App({ signOut }) {
+function App(props, { signOut }) { 
+  const { overrides, ...rest } = props;
   return (
     <View className="App">
       <Flex
