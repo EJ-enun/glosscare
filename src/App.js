@@ -31,12 +31,12 @@ function App(props, { signOut }) {
       templateRows="10rem 10rem 10rem"
       gap={tokens.space.small}
     >
+      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
+      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
+      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
       <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
       <View columnSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
-      <View rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
-      <View rowSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
-      <View rowSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
+      <View columnSpan={2} backgroundColor={tokens.colors.orange[60]}></Vi
     </Grid>
       <Image
         height="408px"
