@@ -18,7 +18,7 @@ function App(props, { signOut }) {
       <Flex
       gap="0"
       direction="column"
-      width="320px"
+      width="350px"
       justifyContent="center"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -31,8 +31,7 @@ function App(props, { signOut }) {
       templateRows="10rem 10rem 10rem"
       gap={tokens.space.small}
     >
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
-      <View rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
+      <View height="48px" columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
       <View backgroundColor={tokens.colors.orange[40]}></View>
       <View backgroundColor={tokens.colors.orange[60]}></View>
     </Grid>
