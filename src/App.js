@@ -10,7 +10,7 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
-
+name = ['Consultant','Surgeon','Cardiologist']
 function App(props, { signOut }) { 
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
@@ -31,11 +31,11 @@ function App(props, { signOut }) {
       type="list"
       direction="row"
       wrap="wrap"
-      items={Object.values(countries).map(({ ['Consultant','Surgeon','Cardiologist']}) => ({
+      items={Object.values(name).map(({ name}) => ({
         name,
       }))}
       isPaginated
-      itemsPerPage={12}
+      itemsPerPage={3}
     >
       {(regions, index) => (
         <Button grow="1" key={index}>
