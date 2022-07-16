@@ -25,6 +25,21 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
+      <Grid
+      height="120px"
+      shrink="0"
+      alignSelf="stretch"
+      objectFit="cover"
+      position="relative"
+      templateColumns="1fr 1fr"
+      templateRows="10rem 10rem 10rem"
+      gap={tokens.space.small}
+    >
+      <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
+      <View rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
+      <View backgroundColor={tokens.colors.orange[40]}></View>
+      <View backgroundColor={tokens.colors.orange[60]}></View>
+    </Grid>
       <Image
         height="408px"
         shrink="0"
