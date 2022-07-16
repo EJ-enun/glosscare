@@ -10,8 +10,8 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
-var doctor = ['Consultant', 'Surgeon', 'Cardiologist'];
-function App(props, { signOut }) { 
+function App(props, { signOut }) {
+  const doctor = ['Consultant', 'Surgeon', 'Cardiologist'];
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
   return (
@@ -27,7 +27,6 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
-      <View height="20px"}></View>
       <Collection
       height="120px"
       type="list"
