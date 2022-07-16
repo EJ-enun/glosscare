@@ -27,6 +27,7 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
+      <View height="20px"}></View>
       <Collection
       height="120px"
       type="list"
@@ -43,6 +44,7 @@ function App(props, { signOut }) {
           {regions.name}
         </Button>
       )}
+      
     </Collection>
       <Image
         height="408px"
