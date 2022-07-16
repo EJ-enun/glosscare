@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
+import { Grid, useTheme, Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 import {
   withAuthenticator,
   Heading,
@@ -11,6 +11,7 @@ import {
 } from "@aws-amplify/ui-react";
 
 function App(props, { signOut }) { 
+  const { tokens } = useTheme();
   const { overrides, ...rest } = props;
   return (
     <View className="App">
@@ -26,11 +27,6 @@ function App(props, { signOut }) {
       {...getOverrideProps(overrides, "ActionCard")}
     >
       <Grid
-      height="120px"
-      shrink="0"
-      alignSelf="stretch"
-      objectFit="cover"
-      position="relative"
       templateColumns="1fr 1fr"
       templateRows="10rem 10rem 10rem"
       gap={tokens.space.small}
