@@ -36,7 +36,7 @@ function App(props, { signOut }) {
       <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
       <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
       <View columnSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[60]}></Vi
+      <View columnSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
     </Grid>
       <Image
         height="408px"
