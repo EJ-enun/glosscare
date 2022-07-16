@@ -2,7 +2,8 @@ import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Grid, useTheme, Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
+import { Collection, Grid, useTheme, Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
+
 import {
   withAuthenticator,
   Heading,
@@ -26,18 +27,22 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
-      <Grid
-      templateColumns="1fr 1fr"
-      templateRows="10rem 10rem 10rem"
-      gap={tokens.space.small}
+      <Collection
+      type="list"
+      direction="row"
+      wrap="wrap"
+      items={Object.values(countries).map(({ ['Consultant','Surgeon','Cardiologist']}) => ({
+        name,
+      }))}
+      isPaginated
+      itemsPerPage={12}
     >
-      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
-      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
-      <View width="100px" rowSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[40]}></View>
-      <View columnSpan={2} backgroundColor={tokens.colors.orange[60]}></View>
-    </Grid>
+      {(regions, index) => (
+        <Button grow="1" key={index}>
+          {regions.name}
+        </Button>
+      )}
+    </Collection>
       <Image
         height="408px"
         shrink="0"
