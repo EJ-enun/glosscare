@@ -11,7 +11,7 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 function App(props, { signOut }) {
-  const doctor = {name:"Consultant", name:"Surgeon", name:"Cardiologist"};
+  const doctor = ["Consultant","Surgeon","Cardiologist"];
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
   return (
