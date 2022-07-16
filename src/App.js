@@ -31,7 +31,10 @@ function App(props, { signOut }) {
       templateRows="10rem 10rem 10rem"
       gap={tokens.space.small}
     >
-      <View height="48px" columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
+      <View columnSpan={2} backgroundColor={tokens.colors.orange[10]}></View>
+      <View backgroundColor={tokens.colors.orange[40]}></View>
+      <View backgroundColor={tokens.colors.orange[60]}></View>
+      <View rowSpan={2} backgroundColor={tokens.colors.orange[20]}></View>
       <View backgroundColor={tokens.colors.orange[40]}></View>
       <View backgroundColor={tokens.colors.orange[60]}></View>
     </Grid>
