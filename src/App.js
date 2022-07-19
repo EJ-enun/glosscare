@@ -11,7 +11,6 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 import { Icon } from '@aws-amplify/ui-react';
-import { DiJsBadge } from 'react-icons/di';
 function App(props, { signOut }) {
   const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
   const { tokens } = useTheme();
