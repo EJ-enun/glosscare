@@ -11,7 +11,7 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 function App(props, { signOut }) {
-  const doctor = ["Consultant","Surgeon","Cardiologist"];
+  const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
   return (
@@ -35,12 +35,11 @@ function App(props, { signOut }) {
       items={Object.values(doctor).map(({name}) => ({
         name,
       }))}
-      isPaginated
       itemsPerPage={3}
     >
-      {(regions, index) => (
+      {(item, index) => (
         <Button grow="1" key={index}>
-          {regions.name}
+          {item.name}
         </Button>
       )}
       
