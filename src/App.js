@@ -36,11 +36,11 @@ function App(props, { signOut }) {
       }))}
       isSearchable
       isPaginated
-      itemsPerPage={9}
+      itemsPerPage={3}
       searchPlaceholder="Type to search..."
       searchFilter={(regions, keyword) =>
-        (regions as any).name.toLowerCase().startsWith(keyword.toLowerCase()),
-      }
+        (regions as any).name.toLowerCase().startsWith(keyword.toLowerCase(),)
+      },
     >
       {(item, index) => (
         <Button grow="1" key={index}>
