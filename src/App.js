@@ -19,18 +19,19 @@ function App(props, { signOut }) {
       <Flex
       gap="0"
       direction="column"
-      width="350px"
       justifyContent="center"
       position="relative"
-      padding="10px 0px 0px 20px"
+      padding="10px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
       <Collection
-      type="grid"
+      type="list"
+      direction="row"
+      justifyContent="space-between"
       templateColumns="1fr 1fr 1fr"
-      gap="15px"
+      gap="20px"
       items={Object.values(doctor).map(({name}) => ({
         name,
       }))}
