@@ -28,18 +28,20 @@ function App(props, { signOut }) {
       {...getOverrideProps(overrides, "ActionCard")}
     >
       <Collection
-      height="120px"
-      type="list"
-      direction="row"
-      wrap="wrap"
+      type="grid"
+      templateColumns="1fr 1fr 1fr"
+      gap="15px"
       items={Object.values(doctor).map(({name}) => ({
         name,
       }))}
       isSearchable
-      itemsPerPage={3}
+      isPaginated
+      itemsPerPage={9}
       searchPlaceholder="Type to search..."
-      searchFilter={(specs, keyword) => (specs as any).name.toLowerCase().startsWith(keyword.toLowerCase())}
-        >
+      searchFilter={(regions, keyword) =>
+        (regions as any).name.toLowerCase().startsWith(keyword.toLowerCase())
+      }
+    >
       {(item, index) => (
         <Button grow="1" key={index}>
           {item.name}
