@@ -22,7 +22,7 @@ function App(props, { signOut }) {
       width="350px"
       justifyContent="center"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="10px 0px 0px 20px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
@@ -34,10 +34,7 @@ function App(props, { signOut }) {
       items={Object.values(doctor).map(({name}) => ({
         name,
       }))}
-      isSearchable
-      isPaginated
       itemsPerPage={3}
-      searchPlaceholder="Type to search..."
       
     >
       {(item, index) => (
