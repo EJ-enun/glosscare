@@ -39,7 +39,7 @@ function App(props, { signOut }) {
       itemsPerPage={9}
       searchPlaceholder="Type to search..."
       searchFilter={(regions, keyword) =>
-        (regions as any).name.toLowerCase().startsWith(keyword.toLowerCase())
+        (regions as any).name.toLowerCase().startsWith(keyword.toLowerCase()),
       }
     >
       {(item, index) => (
