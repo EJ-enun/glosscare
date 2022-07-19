@@ -10,6 +10,8 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
+import { Icon } from '@aws-amplify/ui-react';
+import { DiJsBadge } from 'react-icons/di';
 function App(props, { signOut }) {
   const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
   const { tokens } = useTheme();
@@ -21,7 +23,7 @@ function App(props, { signOut }) {
       direction="column"
       justifyContent="center"
       position="relative"
-      padding="10px 0px 0px 0px"
+      padding="10px 10px 10px 10px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
@@ -40,7 +42,7 @@ function App(props, { signOut }) {
     >
       {(item, index) => (
         <Button grow="1" key={index}>
-          {item.name}
+          {item.name}<Icon ariaLabel="Javascript" as={DiJsBadge} />;
         </Button>
       )}
       
