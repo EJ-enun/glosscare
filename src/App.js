@@ -36,13 +36,10 @@ function App(props, { signOut }) {
         name,
       }))}
       isSearchable
-      itemsPerPage={9}
+      itemsPerPage={3}
       searchPlaceholder="Type to search..."
-      searchFilter={(spec, keyword) =>
-        (spec as any).name.toLowerCase().startsWith(keyword.toLowerCase())
-      }
-
-    >
+      searchFilter={(specs, keyword) => (specs as any).name.toLowerCase().startsWith(keyword.toLowerCase())}
+        >
       {(item, index) => (
         <Button grow="1" key={index}>
           {item.name}
