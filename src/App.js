@@ -35,7 +35,13 @@ function App(props, { signOut }) {
       items={Object.values(doctor).map(({name}) => ({
         name,
       }))}
-      itemsPerPage={3}
+      isSearchable
+      itemsPerPage={9}
+      searchPlaceholder="Type to search..."
+      searchFilter={(spec, keyword) =>
+        (spec as any).name.toLowerCase().startsWith(keyword.toLowerCase())
+      }
+
     >
       {(item, index) => (
         <Button grow="1" key={index}>
