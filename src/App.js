@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Collection, Grid, useTheme, Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
+import { Collection, Grid, useTheme, Button, Flex, Image, Rating, Text, Theme, ThemeProvider } from "@aws-amplify/ui-react";
 
 import {
   withAuthenticator,
@@ -13,8 +13,39 @@ import {
 import { Icon } from '@aws-amplify/ui-react';
 function App(props, { signOut }) {
   const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
+  const account_types = [{account_name:"Patient", text:"Register as a patient"}, {account_name:"HMO", text:"Register as a HMO"}, {account_name:"Therapist", text:"Register as a Therapist"}, {account_name:"Pharmacy", text:"Register store"}, {account_name:"Nurse", text:"Register as a Nurse"}]
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
+  const theme: Theme = {
+  name: 'button-theme',
+  tokens: {
+    colors: {
+      border: {
+        // this will affect the default button's border color
+        primary: { value: 'black' },
+      },
+    },
+    components: {
+      button: {
+        // this will affect the font weight of all button variants
+        fontWeight: { value: '{fontWeights.extrabold}' },
+        // style the primary variation
+        primary: {
+          backgroundColor: { value: '{colors.blue.60}' },
+          _hover: {
+            backgroundColor: { value: '{colors.blue.80}' },
+          },
+          _focus: {
+            backgroundColor: { value: '{colors.blue.80}' },
+          },
+          _active: {
+            backgroundColor: { value: '{colors.blue.90}' },
+          },
+        },
+      },
+    },
+  },
+};
   return (
     <View className="App">
       <Flex
@@ -27,7 +58,7 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
-      <Text variation="secondary">Secondary</Text>
+      <Text variation="secondary">Choose your account type</Text>
       <Collection
       type="list"
       direction="row"
@@ -60,7 +91,12 @@ function App(props, { signOut }) {
         position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "image")}
-      ></Image>
+      >
+        <ThemeProvider theme={theme} colorMode="light">
+    <Flex direction="row">
+      <Button variation="primary">Primary</Button>
+    </Flex>
+  </ThemeProvider></Image>
       <Flex
         gap="16px"
         direction="column"
