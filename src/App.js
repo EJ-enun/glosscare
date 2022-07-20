@@ -73,7 +73,7 @@ function App(props, { signOut }) {
       
     >
       {(item, index) => (
-        <Button variation="primary" height="120"  grow="1" key={index}>
+        <Button variation="primary" grow="1" key={index}>
           <div>{item.name}</div><br/><Icon
       ariaLabel="Camera"
       viewBox={{ width: 50, height: 50}}
@@ -83,20 +83,29 @@ function App(props, { signOut }) {
       )}
       
     </Collection>
-      <Image
-        height="408px"
-        shrink="0"
-        alignSelf="stretch"
-        objectFit="cover"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "image")}
-      >
+      <Collection
+      type="list"
+      direction="row"
+      wrap="wrap"
+      justifyContent="space-between"
+      templateColumns="1fr 1fr 1fr"
+      gap="20px"
+      items={Object.values(account_types).map(({account_name, text }) => ({
+        account_name, text,
+      }))}
+      itemsPerPage={3}
+      
+    >
+      {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
     <Flex direction="row">
-      <Button variation="primary">Primary</Button>
+      <Button variation="primary" grow="1" key={index}><div>{item.account_name} {item.text}</div></Button>
     </Flex>
-  </ThemeProvider></Image>
+    </ThemeProvider>
+        
+      )}
+      
+    </Collection>  
       <Flex
         gap="16px"
         direction="column"
