@@ -41,7 +41,7 @@ function App(props, { signOut }) {
     >
       {(item, index) => (
         <Button grow="1" key={index}>
-          {item.name}<Icon
+          <Div>{item.name}</Div><Div><Br/><Icon
       ariaLabel="tag"
       viewBox={{ width: 23, height: 15 }}
       paths={[
@@ -54,7 +54,7 @@ function App(props, { signOut }) {
           stroke: 'currentColor',
         },
       ]}
-    /></Button>
+    /></Div></Button>
       )}
       
     </Collection>
