@@ -27,9 +27,11 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
+      <Text variation="secondary">Secondary</Text>
       <Collection
       type="list"
       direction="row"
+      wrap="wrap"
       justifyContent="space-between"
       templateColumns="1fr 1fr 1fr"
       gap="20px"
@@ -40,7 +42,7 @@ function App(props, { signOut }) {
       
     >
       {(item, index) => (
-        <Button grow="1" key={index}>
+        <Button variation="primary" height="120"  grow="1" key={index}>
           <div>{item.name}</div><br/><Icon
       ariaLabel="Camera"
       viewBox={{ width: 50, height: 50}}
