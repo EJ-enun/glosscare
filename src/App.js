@@ -98,7 +98,7 @@ function App(props, { signOut }) {
     >
       {(item, index) => (
        
-      <Button variation="primary" grow="1" key={index}>
+      <Button variation="primary" grow="2" backgroundColor="ADD8E6" key={index}>
           <div>{item.name}</div><br/><Icon
       ariaLabel="Camera"
       viewBox={{ width: 50, height: 50}}
