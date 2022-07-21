@@ -17,6 +17,29 @@ function App(props, { signOut }) {
   const { tokens } = useTheme();
   const { overrides, ...rest } = props;
   const theme: Theme = {
+    
+  name: 'card-theme',
+  tokens: {
+    components: {
+      card: {
+        // You can reference other tokens
+        backgroundColor: { value: '{colors.background.success}' },
+        borderRadius: { value: '{radii.large}' },
+        padding: { value: '{space.xl}' },
+
+        // Variations
+        outlined: {
+          // Or use explicit values
+          borderWidth: { value: '10px' },
+          backgroundColor: { value: '{colors.background.warning}' },
+        },
+        elevated: {
+          backgroundColor: { value: '{colors.background.info}' },
+          boxShadow: { value: '{shadows.large}' },
+        },
+      },
+    },
+  },  
   name: 'button-theme',
   tokens: {
     colors: {
@@ -202,3 +225,17 @@ function App(props, { signOut }) {
 }
 
 export default withAuthenticator(App);
+
+<ThemeProvider theme={theme} colorMode="light">
+      <Flex>
+        <Card>
+          <Text>Default</Text>
+        </Card>
+        <Card variation="outlined">
+          <Text>Outlined</Text>
+        </Card>
+        <Card variation="elevated">
+          <Text>Elevated</Text>
+        </Card>
+      </Flex>
+    </ThemeProvider>
