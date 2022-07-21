@@ -37,6 +37,7 @@ function App(props, { signOut }) {
         elevated: {
           backgroundColor: { value: '{colors.background.success}' },
           boxShadow: { value: '{shadows.large}' },
+          width: {value: '280px'},
           
         },
       },
