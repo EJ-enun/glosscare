@@ -23,8 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.outside{ position: relative; width: 80%; height: 200px; background-color: #ADD8E6;}
-.text_account{ position: absolute; bottom: 5px;}
+
 .App-link {
   color: #61dafb;
 }
