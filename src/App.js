@@ -84,7 +84,7 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
-      <Text  padding="10px 10px 10px 10px" variation="tertiary">Choose your account type</Text>
+      <Text padding="10px 10px 10px 10px" variation="tertiary">Choose your account type</Text>
       <Collection
       type="list"
       direction="row"
@@ -114,6 +114,7 @@ function App(props, { signOut }) {
     </Collection>
       <Collection
       type="list"
+      padding="50px 10px 10px 10px"
       direction="row"
       wrap="wrap"
       justifyContent="space-between"
@@ -222,7 +223,7 @@ function App(props, { signOut }) {
           size="large"
           isDisabled={false}
           variation="primary"
-          children="Save"
+          children="Next"
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>
