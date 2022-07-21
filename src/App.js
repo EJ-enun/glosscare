@@ -12,10 +12,7 @@ import {
 } from "@aws-amplify/ui-react";
 import { Icon } from '@aws-amplify/ui-react';
 function App(props, { signOut }) {
-  const css = `.custom-card-class {
-  border: 3px solid red;
-  width: 300px;
-}`;
+  
   const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
   const account_types = [{account_name:"Patient", text:"Register as a patient"}, {account_name:"HMO", text:"Register as a HMO"}, {account_name:"Therapist", text:"Register as a Therapist"}, {account_name:"Pharmacy", text:"Register store"}, {account_name:"Nurse", text:"Register as a Nurse"}]
   const { tokens } = useTheme();
@@ -40,6 +37,7 @@ function App(props, { signOut }) {
         elevated: {
           backgroundColor: { value: '{colors.background.success}' },
           boxShadow: { value: '{shadows.large}' },
+          width: {value: '{80}'}
         },
       },
     },
