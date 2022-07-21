@@ -126,7 +126,7 @@ function App(props, { signOut }) {
         <ThemeProvider theme={theme} colorMode="light">
       <Flex>
        <Card variation="elevated">
-         <Button  padding="10px 10px 10px 10px" variation="primary" grow="1" key={index}><div>{item.account_name} {item.text}</div></Button>
+         <Button variation="primary" grow="1" key={index}><div>{item.text}</div></Button>
         </Card>
       </Flex>
     </ThemeProvider>
