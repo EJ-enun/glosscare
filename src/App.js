@@ -58,7 +58,7 @@ function App(props, { signOut }) {
       {...rest}
       {...getOverrideProps(overrides, "ActionCard")}
     >
-      <Text variation="secondary">Choose your account type</Text>
+      <Text  padding="10px 10px 10px 10px" variation="tertiary">Choose your account type</Text>
       <Collection
       type="list"
       direction="row"
@@ -178,25 +178,6 @@ function App(props, { signOut }) {
           size="default"
           {...getOverrideProps(overrides, "Rating")}
         ></Rating>
-        <Text
-          fontFamily="Inter"
-          fontSize="20px"
-          fontWeight="700"
-          color="rgba(13,26,38,1)"
-          lineHeight="25px"
-          textAlign="left"
-          display="flex"
-          direction="column"
-          justifyContent="flex-start"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="$99 USD"
-          {...getOverrideProps(overrides, "$99 USD")}
-        ></Text>
         <Button
           display="flex"
           gap="0"
@@ -210,7 +191,7 @@ function App(props, { signOut }) {
           size="large"
           isDisabled={false}
           variation="primary"
-          children="Primary Button"
+          children="Save"
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>
