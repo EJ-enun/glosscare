@@ -34,7 +34,7 @@ function App(props, { signOut }) {
           backgroundColor: { value: '{colors.background.warning}' },
         },
         elevated: {
-          backgroundColor: { value: '{colors.background.info}' },
+          backgroundColor: { value: '{colors.background.success}' },
           boxShadow: { value: '{shadows.large}' },
         },
       },
@@ -125,8 +125,8 @@ function App(props, { signOut }) {
       {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
       <Flex>
-       <Card variation="elevated">
-         <Button variation="primary" grow="1" key={index}><div>{item.text}</div></Button>
+       <Card variation="elevated" grow="1" key={index}>
+        <div>{item.text}</div>
         </Card>
       </Flex>
     </ThemeProvider>
