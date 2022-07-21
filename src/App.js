@@ -63,6 +63,7 @@ function App(props, { signOut }) {
       type="list"
       direction="row"
       wrap="wrap"
+      padding="10px 10px 10px 10px"
       justifyContent="space-between"
       templateColumns="1fr 1fr 1fr"
       gap="20px"
@@ -99,7 +100,7 @@ function App(props, { signOut }) {
       {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
     <Flex direction="row">
-      <Button variation="primary" grow="1" key={index}><div>{item.account_name} {item.text}</div></Button>
+      <Button  padding="10px 10px 10px 10px" variation="primary" grow="1" key={index}><div>{item.account_name} {item.text}</div></Button>
     </Flex>
     </ThemeProvider>
         
