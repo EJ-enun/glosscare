@@ -128,7 +128,7 @@ function App(props, { signOut }) {
       {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
       <Flex>
-       <Card variation="outlined" backgroundColor={tokens.colors.brand.secondary[20]} grow="1" key={index}>
+       <Card variation="outlined" backgroundColor={tokens.colors.brand.secondary[10]} grow="1" key={index}>
         <div>{item.text}</div>
         </Card>
       </Flex>
