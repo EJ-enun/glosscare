@@ -125,7 +125,7 @@ function App(props, { signOut }) {
       {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
       <Flex>
-       <Card variation="elevated" key={index}>
+       <Card variation="elevated" grow="1" key={index}>
         <div>{item.text}</div>
         </Card>
       </Flex>
