@@ -98,7 +98,7 @@ function App(props, { signOut }) {
     >
       {(item, index) => (
        
-      <Button variation="primary" grow="2" backgroundColor={tokens.colors.brand.primary[20]} key={index}>
+      <Button variation="primary" grow="2" key={index}>
           <div>{item.name}</div><br/><Icon
       ariaLabel="Camera"
       viewBox={{ width: 50, height: 50}}
@@ -125,7 +125,7 @@ function App(props, { signOut }) {
       {(item, index) => (
         <ThemeProvider theme={theme} colorMode="light">
       <Flex>
-       <Card variation="elevated" grow="1" key={index}>
+       <Card variation="elevated" backgroundColor={tokens.colors.brand.primary[20]} grow="1" key={index}>
         <div>{item.text}</div>
         </Card>
       </Flex>
