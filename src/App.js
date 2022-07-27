@@ -13,10 +13,11 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
-import image1 from './img/1.jpg'
-import image2 from './img/2.jpg'
-import image3 from './img/3.jpg'
-import image4 from './img/4.jpg'import { Icon } from '@aws-amplify/ui-react';
+import image1 from './img/1.jpg';
+import image2 from './img/2.jpg';
+import image3 from './img/3.jpg';
+import image4 from './img/4.jpg';
+import { Icon } from '@aws-amplify/ui-react';
 
 function App(props, { signOut }) {
   
