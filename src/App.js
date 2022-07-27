@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
+import './App.css';
 import React from "react";
-import axios from 'axios';
-import AliceCarousel from 'react-alice-carousel'; 
+import axios from "axios";
+import AliceCarousel from "react-alice-carousel"; 
 import "react-alice-carousel/lib/alice-carousel.css";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Collection, Grid, useTheme, Button, Flex, Image, Rating, Text, Theme, ThemeProvider } from "@aws-amplify/ui-react";
