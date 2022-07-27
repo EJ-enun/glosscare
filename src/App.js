@@ -1,6 +1,9 @@
 import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
 import React from "react";
+import axios from 'axios';
+import AliceCarousel from 'react-alice-carousel'; 
+import "react-alice-carousel/lib/alice-carousel.css";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Collection, Grid, useTheme, Button, Flex, Image, Rating, Text, Theme, ThemeProvider } from "@aws-amplify/ui-react";
 
@@ -10,7 +13,11 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
-import { Icon } from '@aws-amplify/ui-react';
+import image1 from './img/1.jpg'
+import image2 from './img/2.jpg'
+import image3 from './img/3.jpg'
+import image4 from './img/4.jpg'import { Icon } from '@aws-amplify/ui-react';
+
 function App(props, { signOut }) {
   
   const doctor = [{ name:"Consultant"}, {name:"Surgeon"}, {name:"Cardiologist"}];
@@ -157,25 +164,12 @@ function App(props, { signOut }) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Main Text")}
         >
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(13,26,38,1)"
-            lineHeight="20px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            shrink="0"
-            alignSelf="stretch"
-            objectFit="cover"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Classic Long Sleeve T-Shirt"
-            {...getOverrideProps(overrides, "Classic Long Sleeve T-Shirt")}
-          ></Text>
+          <AliceCarousel autoPlay autoPlayInterval="3000">
+	        <img src={image1} className="sliderimg"/>
+	        <img src={image2} className="sliderimg"/>
+	        <img src={image3} className="sliderimg"/>
+	        <img src={image4} className="sliderimg"/>
+	      </AliceCarousel>
           <Text
             fontFamily="Inter"
             fontSize="16px"
@@ -194,7 +188,7 @@ function App(props, { signOut }) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Information about this product"
-            {...getOverrideProps(overrides, "Information about this product")}
+            {...getOverrideProps(overrides, "GlossCare Technologies, Bringing Healthcare to you.")}
           ></Text>
         </Flex>
         <Rating
